@@ -7,7 +7,7 @@ variable "instance_type" {
 }
 
 variable "vpc_id" {
-    default = "vpc-3345b25a"    #VPC ID of my account's default vpc
+    default = "vpc-799e4c12"    #VPC ID of my account's default vpc
 }
 
 variable "port" {
