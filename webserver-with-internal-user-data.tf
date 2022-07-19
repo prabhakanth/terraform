@@ -43,6 +43,7 @@ resource "aws_instance" "ourfirst" {
   key_name = "zoomkey"
   user_data = <<-EOF
         #!/bin/bash
+        sudo yum update -y
         sudo yum install httpd -y
         sudo systemctl start httpd
         sudo systemctl enable httpd
