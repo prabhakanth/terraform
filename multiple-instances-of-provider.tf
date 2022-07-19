@@ -7,10 +7,7 @@ provider "aws" {
    alias = "usa"
 }
 
-provider "aws" {
-  region = "es-west-1"
-  alias = "eu"
-}
+
 resource "aws_instance" "indiaserver" {
   ami = "ami-0c1a7f89451184c8b" #this ami is specific to mumbai region
   instance_type = "t2.micro"
@@ -28,13 +25,6 @@ resource "aws_instance" "usaserver" {
   }
 }
 
-resource "aws_instance" "euserver" {
-  ami = "ami-0d71ea30463e0ff8d"   #this ami is specific to virginia region
-  instance_type = "t2.micro"
-  provider = aws.eu
-  tags = {
-     Name = "eu-server"
-  }
-}
+
 
  
