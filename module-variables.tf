@@ -1,19 +1,19 @@
 variable "ami_id" {
-    default = "ami-041d6256ed0f2061c"  #AMI ID specific to Mumbai Region
+    type = "string"
 }
 
 variable "instance_type" {
-    default = "t2.micro"
+    type = "string"
 }
 
 variable "vpc_id" {
-    default = "vpc-799e4c12"    #VPC ID of my account's default vpc
+    type = "string"    #VPC ID of my account's default vpc
 }
 
 variable "port" {
-    default = 22
+    type = "number"
 }
 
 variable "cidr_block" {
-    default = "0.0.0.0/0"
+    type = "string"
 }
